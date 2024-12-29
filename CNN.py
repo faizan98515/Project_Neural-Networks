@@ -23,12 +23,12 @@ model = Sequential([
     Conv2D(16, (3, 3), activation='relu', input_shape=(32, 32, 3), padding='same'),
     MaxPooling2D(pool_size=(2, 2)),
 
-    Conv2D(16, (3, 3), activation='relu', padding='same'),
+    Conv2D(32, (3, 3), activation='relu', padding='same'),
     MaxPooling2D(pool_size=(2, 2)),
     
     Flatten(),
-    Dense(256, activation='relu'),
-    Dense(100, activation='softmax')
+    Dense(128, activation='relu'),
+    Dense(10, activation='softmax')
 ])
 
 model.summary()
